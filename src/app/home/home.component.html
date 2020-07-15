@@ -1,0 +1,19 @@
+<div>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">Go Back</a> 
+  <div *ngIf="savedData.length">
+    <div *ngFor="let user of savedData; let i = index">
+      Number {{ i + 1 }} User data
+      <br />
+      <p>Name: {{ user.name }}</p>
+
+      <p>Email: {{ user.email }}</p>
+      <p>Address: {{ user.address }}</p>
+      <p>Mobile: {{ user.mobile }}</p>
+      <br />
+      <hr />
+    </div>
+  </div>
+  <div *ngIf="!savedData.length">
+      No saved Data
+  </div>
+</div>
